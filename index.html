@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Device</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/min-normalize.css" rel="stylesheet">
     <link href="css/min-style.css" rel="stylesheet">
   </head>
   <body>
@@ -15,6 +15,7 @@
         </a>
         <div class="top-navigation">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input class="search-input" id="search" name="search" type="text" placeholder="Поиск по сайту">
             <button class="button-find" type="submit">Найти</button>
           </form>
@@ -58,11 +59,6 @@
         <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked>
         <input class="visually-hidden" type="radio" id="slide-2" name="toggle">
         <input class="visually-hidden" type="radio" id="slide-3" name="toggle">
-        <div class="slider-controls">
-          <label class="slider-control-item slider-control-item-1" for="slide-1" aria-label="Первый слайд"></label>
-          <label class="slider-control-item slider-control-item-2" for="slide-2" aria-label="Второй слайд"></label>
-          <label class="slider-control-item slider-control-item-3" for="slide-3" aria-label="Третий слайд"></label>
-        </div>
         <ul class="slide-list no-marker">
           <li class="slide slide-1">
             <div class="col">
@@ -72,7 +68,14 @@
               <b class="slide-number">01</b>
               <h3>Делай селфи,<br>как Бен Стиллер!</h3>
               <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a class="button" href="#">Подробнее</a>
+              <div class="buttons-controls">
+                <a class="button" href="#">Подробнее</a>
+                <div class="slider-controls">
+                  <label class="slider-control-item slider-control-item-1" for="slide-1" aria-label="Первый слайд"></label>
+                  <label class="slider-control-item slider-control-item-2" for="slide-2" aria-label="Второй слайд"></label>
+                  <label class="slider-control-item slider-control-item-3" for="slide-3" aria-label="Третий слайд"></label>
+                </div>
+              </div>
               <table>
                 <tr>
                   <td class="item-feature">8,5 м</td>
@@ -95,7 +98,14 @@
               <b class="slide-number">02</b>
               <h3>Худеем<br>правильно!</h3>
               <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              <a class="button" href="#">Подробнее</a>
+              <div class="buttons-controls">
+                <a class="button" href="#">Подробнее</a>
+                <div class="slider-controls">
+                  <label class="slider-control-item slider-control-item-1" for="slide-1" aria-label="Первый слайд"></label>
+                  <label class="slider-control-item slider-control-item-2" for="slide-2" aria-label="Второй слайд"></label>
+                  <label class="slider-control-item slider-control-item-3" for="slide-3" aria-label="Третий слайд"></label>
+                </div>
+              </div>
               <table>
                 <tr>
                   <td class="item-feature">48 часов</td>
@@ -114,7 +124,14 @@
               <b class="slide-number">03</b>
               <h3 class="slide-title">Порхает как бабочка, жалит как пчела!</h3>
               <p>Этот обычный, на первый взгляд, квадракоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              <a class="button" href="#">Подробнее</a>
+              <div class="buttons-controls">
+                <a class="button" href="#">Подробнее</a>
+                <div class="slider-controls">
+                  <label class="slider-control-item slider-control-item-1" for="slide-1" aria-label="Первый слайд"></label>
+                  <label class="slider-control-item slider-control-item-2" for="slide-2" aria-label="Второй слайд"></label>
+                  <label class="slider-control-item slider-control-item-3" for="slide-3" aria-label="Третий слайд"></label>
+                </div>
+              </div>
               <table>
                 <tr>
                   <td class="item-feature">800 м</td>
@@ -418,16 +435,16 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a class="button write-us-button" href="write-us.html">Подробнее о нас</a>
+          <a class="button" href="#">Подробнее о нас</a>
         </section>
 
         <section class="contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <a href="#">
+          <a class="map-button" href="#">
             <img src="img/map.jpg" alt="Адрес: Москва, улица Строителей, 15" width="560" height="222">
           </a>
-          <a class="button map-button" href="map.html">Напишите нам</a>
+          <a class="button write-us-button" href="form.html">Напишите нам</a>
         </section>
       </div>
 
@@ -464,7 +481,8 @@
         <div class="footer-wrapper">
           <ul class="social-buttons no-marker">
             <li>
-              <a href="#" aria-label="Девайс в Фэйсбук">
+              <a href="#">
+                <span class="visually-hidden">Девайс в Фэйсбук</span>
                 <svg width="32px" height="32px">
                   <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
                 	v3.444h3.021v3.445h-3.021v8.61h-3.021v-8.61H11v-3.445h3.021V9.455c0-1.902,1.353-3.445,3.021-3.445h3.021V9.455z"/>
@@ -472,7 +490,8 @@
               </a>
             </li>
             <li>
-              <a href="#" aria-label="Девайс в Инстаграм">
+              <a href="#">
+                <span class="visually-hidden">Девайс в Инстаграм</span>
                 <svg width="32px" height="32px">
                   <g>
                   	<path fill="#FFFFFF" d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
@@ -488,7 +507,8 @@
               </a>
             </li>
             <li>
-              <a href="#" aria-label="Девайс в Твиттер">
+              <a href="#">
+                <span class="visually-hidden">Девайс в Твиттер</span>
                 <svg width="32px" height="32px">
                   <g id="Layer_1">
                   </g>

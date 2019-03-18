@@ -2,8 +2,8 @@
   font-family: "Gilroy";
   src:
     local("Gilroy Light"),
-    url("gilroylight.woff") format("woff"),
-    url("gilroylight.woff2") format("woff2");
+    url("../fonts/gilroylight.woff") format("woff"),
+    url("../fonts/gilroylight.woff2") format("woff2");
     font-weight: 400;
 }
 
@@ -11,8 +11,8 @@
   font-family: "Gilroy";
   src:
     local("Gilroy ExtraBold"),
-    url("gilroyextrabold.woff") format("woff"),
-    url("gilroyextrabold.woff2") format("woff2");
+    url("../fonts/gilroyextrabold.woff") format("woff"),
+    url("../fonts/gilroyextrabold.woff2") format("woff2");
     font-weight: 700;
 }
 
@@ -496,17 +496,24 @@ input[type="radio"].visually-hidden {
   background-image: linear-gradient(#f7e296 113px, transparent 113px);
 }
 
+.buttons-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .slider-controls {
-  position: absolute;
-  right: 74px;
-  top: 320px;
+  margin-right: 74px;
+  margin-top: 2px;
 }
 
 .slider-control-item {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  z-index: 90;
 
   width: 12px;
   height: 12px;
@@ -537,9 +544,9 @@ input[type="radio"].visually-hidden {
   background-size: 12px 12px;
 }
 
-#slide-1:checked ~ .slider-controls .slider-control-item-1::after,
-#slide-2:checked ~ .slider-controls .slider-control-item-2::after,
-#slide-3:checked ~ .slider-controls .slider-control-item-3::after {
+#slide-1:checked ~ .slide-list .slider-control-item-1::after,
+#slide-2:checked ~ .slide-list .slider-control-item-2::after,
+#slide-3:checked ~ .slide-list .slider-control-item-3::after {
   background-image: url("../img/slider-button.svg");
   background-size: 12px 12px;
 }
@@ -826,7 +833,7 @@ input[type="radio"].visually-hidden {
   top: 0;
   right: -4px;
 
-  height: 319px;
+  height: 100%;
   width: 7px;
 
   background-color: #000;
@@ -909,10 +916,15 @@ input[type="radio"].visually-hidden {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-bottom: 93px;
+}
+
+.logo-list li {
+  margin-right: 40px;
+}
+
+.logo-list li:nth-child(4n){
+  margin-right: 0;
 }
 
 .logo-list a {
@@ -989,7 +1001,7 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts {
-  width: 520px;
+  width: 560px;
 }
 
 .about-us h2,
@@ -1379,7 +1391,7 @@ input[type="radio"].visually-hidden {
   height: 22px;
   padding: 0;
 
-  background-image: url(../img/filter-button.svg);
+  background-image: url("../img/filter-button.svg");
   cursor: pointer;
 }
 
